@@ -18,9 +18,9 @@ This project will create a lightning-fast, accessible portfolio for **Harshit An
 
 ## 3. Target Audience
 
--   Tech recruiters \& engineering managers
--   Open-source devs and peers
--   Conference organisers, tech bloggers
+- Tech recruiters \& engineering managers
+- Open-source devs and peers
+- Conference organisers, tech bloggers
 
 ## 4. Functional Requirements
 
@@ -36,13 +36,13 @@ This project will create a lightning-fast, accessible portfolio for **Harshit An
 
 ## 5. Non-Functional Requirements
 
--   **Rendering** – SSG + ISR; SSR for dynamic blog pages
--   **SEO** – JSON-LD (Person, Article, Project), sitemap.xml, robots.txt
--   **Accessibility** – WCAG 2.2 AA, semantic HTML, focus states
--   **Performance** – `next/image`, self-hosted `next/font`, dynamic imports
--   **Code Quality** – TypeScript strict, ESLint, Prettier, Husky, Jest + RTL, Cypress
--   **CI/CD** – GitHub Actions → Vercel preview \& prod
--   **Analytics** – Vercel Web Vitals + Plausible/GA4
+- **Rendering** – SSG + ISR; SSR for dynamic blog pages
+- **SEO** – JSON-LD (Person, Article, Project), sitemap.xml, robots.txt
+- **Accessibility** – WCAG 2.2 AA, semantic HTML, focus states
+- **Performance** – `next/image`, self-hosted `next/font`, dynamic imports
+- **Code Quality** – TypeScript strict, ESLint, Prettier, Husky, Jest + RTL, Cypress
+- **CI/CD** – GitHub Actions → Vercel preview \& prod
+- **Analytics** – Vercel Web Vitals + Plausible/GA4
 
 ## 6. Tech Stack
 
@@ -98,14 +98,14 @@ pnpm dev
 ```tsx
 // pages/projects.tsx (excerpt)
 export default function Projects() {
-	const { data: repos } = useQuery(["repos"], fetchPinnedRepos);
-	return (
-		<section className="grid gap-6 sm:grid-cols-2">
-			{repos?.map((repo) => (
-				<ProjectCard key={repo.id} repo={repo} />
-			))}
-		</section>
-	);
+  const { data: repos } = useQuery(['repos'], fetchPinnedRepos);
+  return (
+    <section className="grid gap-6 sm:grid-cols-2">
+      {repos?.map((repo) => (
+        <ProjectCard key={repo.id} repo={repo} />
+      ))}
+    </section>
+  );
 }
 ```
 
@@ -129,16 +129,16 @@ export default function Projects() {
 
 ## 12. Future Enhancements
 
--   i18n routing
--   Newsletter (Buttondown)
--   3-D interactive hero (Three.js)
--   Auth-gated live playground demos
+- i18n routing
+- Newsletter (Buttondown)
+- 3-D interactive hero (Three.js)
+- Auth-gated live playground demos
 
 ## Acknowledgements
 
--   [Next.js Docs](https://nextjs.org/docs)
--   [Framer Motion](https://www.framer.com/motion/)
--   [Tailwind CSS](https://tailwindcss.com)
+- [Next.js Docs](https://nextjs.org/docs)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Tailwind CSS](https://tailwindcss.com)
 
 > _Built with passion and pixel-perfect precision © 2025 Harshit Anand_
 
