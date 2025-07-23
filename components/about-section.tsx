@@ -6,7 +6,7 @@ function AboutSection() {
     <section id="about" className="container py-24 sm:py-32">
       <Card>
         <CardHeader>
-          <h2 className="text-3xl font-bold">About Me</h2>
+          <h2 className="text-3xl font-bold tracking-wide">About Me</h2>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">

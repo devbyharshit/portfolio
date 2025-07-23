@@ -1,5 +1,4 @@
 export async function fetchPinnedRepos() {
-  console.log(process.env.GITHUB_TOKEN, process.env.NEXT_PUBLIC_GITHUB_USERNAME);
   const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {

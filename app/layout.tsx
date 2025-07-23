@@ -1,17 +1,27 @@
 'use client';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Inter as FontSans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
+import { Oswald as FontSans } from 'next/font/google';
+import { Nunito_Sans } from 'next/font/google';
 
+import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 import { cn } from '@/lib/utils';
 import './globals.css';
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
 
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
+  weight: ['700'],
+  display: 'swap',
+});
+
+const fontNunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  variable: '--font-nunito-sans',
+  weight: ['400'],
+  display: 'swap',
 });
 
 const queryClient = new QueryClient();
@@ -30,7 +40,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`dark ${fontSans.variable} ${fontNunitoSans.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script
           type="application/ld+json"
