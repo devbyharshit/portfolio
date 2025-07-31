@@ -2,8 +2,8 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 import { Toaster, toast } from 'react-hot-toast';
+import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -57,7 +57,7 @@ function ContactSection() {
   return (
     <section id="contact" className="container py-24 sm:py-32">
       <Toaster />
-      <h2 className="text-3xl font-bold text-center mb-8 tracking-wide">Contact Me</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 tracking-tighter">CONTACT ME</h2>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

@@ -1,4 +1,3 @@
-import { SkillsChart } from '@/components/skills-chart';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 function AboutSection() {
@@ -6,7 +5,7 @@ function AboutSection() {
     <section id="about" className="container py-24 sm:py-32">
       <Card>
         <CardHeader>
-          <h2 className="text-3xl font-bold tracking-wide">About Me</h2>
+          <h2 className="text-3xl font-bold tracking-tighter">ABOUT ME</h2>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -19,9 +18,6 @@ function AboutSection() {
                 new technologies and am currently expanding my skills in back-end development with
                 Java.
               </p>
-            </div>
-            <div className="flex items-center justify-center">
-              <SkillsChart />
             </div>
           </div>
         </CardContent>
