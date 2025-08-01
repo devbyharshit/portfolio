@@ -1,13 +1,6 @@
-'use client';
-
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Analytics } from '@vercel/analytics/react';
-import { Oswald as FontSans } from 'next/font/google';
-import { Nunito_Sans } from 'next/font/google';
-
-import { Footer } from '@/components/footer';
-import { Header } from '@/components/header';
-import { cn } from '@/lib/utils';
+import { Oswald as FontSans, Nunito_Sans } from 'next/font/google';
+import ClientLayout from './client-layout';
 import './globals.css';
 
 const fontSans = FontSans({
@@ -23,8 +16,6 @@ const fontNunitoSans = Nunito_Sans({
   weight: ['400'],
   display: 'swap',
 });
-
-const queryClient = new QueryClient();
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -52,16 +43,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}
+        className={`min-h-screen bg-background font-sans antialiased ${fontSans.variable}`}
         suppressHydrationWarning
       >
-        <QueryClientProvider client={queryClient}>
-          <div className="relative flex min-h-dvh flex-col bg-background">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-        </QueryClientProvider>
+        <ClientLayout>{children}</ClientLayout>
         <Analytics />
       </body>
     </html>
