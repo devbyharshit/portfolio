@@ -1,10 +1,122 @@
+import Link from 'next/link';
+import { BsTwitterX } from 'react-icons/bs';
+import { FaGithub } from 'react-icons/fa';
+import { SiLinkedin } from 'react-icons/si';
+import { PulsatingButton } from './ui/pulsating-button';
+
 export function Footer() {
   return (
-    <footer className="py-6 md:px-8 md:py-0">
-      <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-        <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
-          Built with passion and pixel-perfect precision © {new Date().getFullYear()} Harshit Anand
-        </p>
+    <footer className="bg-[#1e1e1e]/95 text-white pt-16 pb-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+          {/* Left side - Call to action */}
+          <div className="space-y-6">
+            <h2 className="text-6xl md:text-6xl font-bold leading-tight tracking-tight uppercase mt-[-10px]">
+              LET'S WORK
+              <br />
+              TOGETHER
+            </h2>
+
+            <PulsatingButton
+              className="rounded-full px-8 py-3 text-base font-medium bg-[#c1ff72] text-black hover:bg-[#a8e55e] border-none"
+              pulseColor="rgba(193, 255, 114, 0.5)"
+              duration="2s"
+            >
+              LET'S TALK
+            </PulsatingButton>
+          </div>
+
+          {/* Right side - Navigation and contact */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 [font-family:var(--font-nunito-sans),_sans-serif]">
+            {/* Explore section */}
+            <div>
+              <h2 className="text-xl font-semibold mb-6 uppercase">Explore</h2>
+              <ul className="space-y-5">
+                <li>
+                  <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/skills" className="text-gray-400 hover:text-white transition-colors">
+                    Skills
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/experience"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Experience
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/projects"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Projects
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Say Hello section */}
+            <div>
+              <h2 className="text-xl font-semibold mb-6 uppercase">Connect</h2>
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-3">
+                  <Link
+                    href="mailto:harshitanandcodes@duck.com"
+                    className="text-gray-400"
+                    target="_blank"
+                  >
+                    harshitanandcodes@duck.com
+                  </Link>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="text-gray-400">+91 (956) 090-7202</div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="text-gray-400">New Delhi, India</div>
+                </div>
+
+                <div className="flex space-x-4 mt-6">
+                  <Link
+                    href="https://github.com/devbyharshit"
+                    aria-label="Github"
+                    className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                  >
+                    <FaGithub size={16} />
+                  </Link>
+                  <Link
+                    href="https://x.com/devbyharshit"
+                    aria-label="Twitter"
+                    className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                  >
+                    <BsTwitterX size={16} />
+                  </Link>
+                  <Link
+                    href="https://linkedin.com/in/devbyharshit"
+                    aria-label="LinkedIn"
+                    className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                  >
+                    <SiLinkedin size={16} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom section with copyright and policies */}
+        <div className="border-t border-neutral-700 pt-8 flex flex-col justify-center items-center text-sm text-gray-400 text-center mb-4 md:mb-0 [font-family:var(--font-nunito-sans),_sans-serif]">
+          <span>© {new Date().getFullYear()} Harshit Anand. All rights reserved.</span>
+          <span>Designed and built with ❤️</span>
+        </div>
       </div>
     </footer>
   );

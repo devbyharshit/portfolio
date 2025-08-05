@@ -32,12 +32,21 @@ const config: Config = {
           from: { transform: 'translateY(0)' },
           to: { transform: 'translateY(calc(-100% - var(--gap)))' },
         },
+        'pulse-shadow': {
+          '0%, 100%': {
+            boxShadow: '0 0 0 0 var(--pulse-color, rgba(147, 51, 234, 0.5))',
+          },
+          '50%': {
+            boxShadow: '0 0 0 8px var(--pulse-color, rgba(147, 51, 234, 0.5))',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+        'pulse-shadow': 'pulse-shadow var(--duration, 2s) ease-out infinite',
       },
       colors: {
         border: 'var(--border)',
