@@ -329,11 +329,11 @@ const ReviewCard = ({ icon, name, bg }: { icon: JSX.Element; bg: JSX.Element; na
       animate={controls}
       className={cn(
         'relative cursor-pointer overflow-hidden rounded-2xl px-4 py-2 border [font-family:var(--font-nunito-sans),_sans-serif]',
-        'bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]',
-        'transform-gpu dark:bg-transparent dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]',
+        'bg-card shadow-md',
+        'transform-gpu dark:bg-transparent dark:border dark:border-border',
       )}
     >
-      <span className="inline-flex items-center justify-center w-full gap-2 font-medium dark:text-white">
+      <span className="inline-flex items-center justify-center w-full gap-2 font-medium dark:text-foreground">
         {icon} {name}
       </span>
     </motion.div>

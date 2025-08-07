@@ -34,10 +34,10 @@ const config: Config = {
         },
         'pulse-shadow': {
           '0%, 100%': {
-            boxShadow: '0 0 0 0 var(--pulse-color, rgba(147, 51, 234, 0.5))',
+            boxShadow: '0 0 0 0 var(--pulse-color, var(--secondary))',
           },
           '50%': {
-            boxShadow: '0 0 0 8px var(--pulse-color, rgba(147, 51, 234, 0.5))',
+            boxShadow: '0 0 0 8px var(--pulse-color, var(--secondary))',
           },
         },
       },

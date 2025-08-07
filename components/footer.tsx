@@ -6,7 +6,7 @@ import { PulsatingButton } from './ui/pulsating-button';
 
 export function Footer() {
   return (
-    <footer className="bg-[#1e1e1e]/95 text-white pt-16 pb-8">
+    <footer className="bg-card text-foreground pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Left side - Call to action */}
@@ -18,8 +18,8 @@ export function Footer() {
             </h2>
 
             <PulsatingButton
-              className="rounded-full px-8 py-3 text-base font-medium bg-[#c1ff72] text-black hover:bg-[#a8e55e] border-none"
-              pulseColor="rgba(193, 255, 114, 0.5)"
+              className="rounded-full px-8 py-3 text-base font-medium bg-secondary text-secondary-foreground hover:bg-secondary/90 border-none"
+              pulseColor="var(--pulse)"
               duration="2s"
             >
               LET'S TALK
@@ -33,19 +33,25 @@ export function Footer() {
               <h2 className="text-xl font-semibold mb-6 uppercase">Explore</h2>
               <ul className="space-y-5">
                 <li>
-                  <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                  <Link
+                    href="/about"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/skills" className="text-gray-400 hover:text-white transition-colors">
+                  <Link
+                    href="/skills"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
                     Skills
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/experience"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Experience
                   </Link>
@@ -53,7 +59,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/projects"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Projects
                   </Link>
@@ -88,21 +94,21 @@ export function Footer() {
                   <Link
                     href="https://github.com/devbyharshit"
                     aria-label="Github"
-                    className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                    className="w-8 h-8 rounded-full bg-background flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <FaGithub size={16} />
                   </Link>
                   <Link
                     href="https://x.com/devbyharshit"
                     aria-label="Twitter"
-                    className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                    className="w-8 h-8 rounded-full bg-background flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <BsTwitterX size={16} />
                   </Link>
                   <Link
                     href="https://linkedin.com/in/devbyharshit"
                     aria-label="LinkedIn"
-                    className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                    className="w-8 h-8 rounded-full bg-background flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <SiLinkedin size={16} />
                   </Link>

@@ -41,7 +41,7 @@ export function Header() {
       marginRight: 'auto',
       borderRadius: 9999,
       scale: 0.97,
-      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.075)',
+      boxShadow: 'var(--shadow-lg)',
       transition: {
         type: 'spring',
         stiffness: 90,
@@ -107,7 +107,7 @@ export function Header() {
   const animationVariant = scrollState.isScrolledDown ? 'scrolled' : 'top';
 
   // Dynamic classes based on scroll state
-  const dynamicClasses = scrollState.isScrolledDown ? 'hover:shadow-2xl hover:bg-[#1e1e1e]' : '';
+  const dynamicClasses = scrollState.isScrolledDown ? 'hover:shadow-2xl hover:bg-popover' : '';
 
   return (
     <motion.header
@@ -117,7 +117,7 @@ export function Header() {
       ref={headerRef}
     >
       <motion.div
-        className={`flex items-center justify-between px-6 bg-[#1e1e1e]/95 backdrop-blur supports-[backdrop-filter]:bg-[#1e1e1e]/90 transform-gpu ${dynamicClasses}`}
+        className={`flex items-center justify-between px-6 bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/90 transform-gpu ${dynamicClasses}`}
         initial="initial"
         animate={animationVariant}
         variants={headerVariants}
@@ -126,7 +126,7 @@ export function Header() {
       >
         {/* Logo on the left */}
         <Link href="/" className="flex items-center">
-          <span className="text-4xl font-bold text-white ml-2">devByHarshit</span>
+          <span className="text-4xl font-bold text-foreground ml-2">devByHarshit</span>
         </Link>
 
         {/* Navigation menu */}
@@ -135,7 +135,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className="text-lg font-medium text-white hover:text-gray-300 transition-colors px-3 py-2"
+                className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors px-3 py-2"
               >
                 <Link href="/#about">ABOUT</Link>
               </NavigationMenuLink>
@@ -143,7 +143,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className="text-lg font-medium text-white hover:text-gray-300 transition-colors px-3 py-2"
+                className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors px-3 py-2"
               >
                 <Link href="/#skills">SKILLS</Link>
               </NavigationMenuLink>
@@ -151,7 +151,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className="text-lg font-medium text-white hover:text-gray-300 transition-colors px-3 py-2"
+                className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors px-3 py-2"
               >
                 <Link href="/#experience">EXPERIENCE</Link>
               </NavigationMenuLink>
@@ -159,7 +159,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuLink
                 asChild
-                className="text-lg font-medium text-white hover:text-gray-300 transition-colors px-3 py-2"
+                className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors px-3 py-2"
               >
                 <Link href="/#projects">PROJECTS</Link>
               </NavigationMenuLink>
@@ -170,9 +170,9 @@ export function Header() {
         <div className="flex items-center gap-4">
           {/* CTA button */}
           <Button
-            className="bg-[#c1ff72] hover:bg-[#a8e55e] text-black font-medium rounded-full px-5 text-xl"
+            className="font-medium rounded-full px-5 text-xl h-[3.5rem]"
             size="lg"
-            style={{ height: '3.5rem', width: '8rem' }}
+            variant="secondary"
           >
             LET'S TALK
           </Button>

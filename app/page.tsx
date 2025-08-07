@@ -1,4 +1,5 @@
 import AboutSection from '@/components/about-section';
+import ContactSection from '@/components/contact-section';
 import ExperienceSection from '@/components/experience-section';
 import ProjectsSection from '@/components/projects-section';
 import { Button } from '@/components/ui/button';
@@ -11,12 +12,12 @@ export default function Home() {
         {/* Main headline */}
         <h1 className="text-4xl sm:text-6xl md:text-9xl font-extrabold leading-tight tracking-tighter flex flex-col items-center gap-2">
           <span className="block">
-            <span className="text-white">HI, I'M </span>
-            <span className="text-pink-300">HARSHIT ANAND</span>
+            <span className="text-muted-foreground">HI, I'M </span>
+            <span className="text-secondary-foreground">HARSHIT ANAND</span>
           </span>
           <span className="block">
-            <span className="text-white">A PASSIONATE </span>
-            <span className="text-green-300">DEVELOPER</span>
+            <span className="text-muted-foreground">A PASSIONATE </span>
+            <span className="text-secondary-foreground">DEVELOPER</span>
           </span>
         </h1>
         {/* Subtitle */}
@@ -39,7 +40,7 @@ export default function Home() {
         <SkiperMarquee />
         <ExperienceSection />
         <ProjectsSection />
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
     </>
   );

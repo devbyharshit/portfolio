@@ -1,5 +1,5 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
+import React from 'react';
 
 interface PulsatingButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   pulseColor?: string;
@@ -7,7 +7,10 @@ interface PulsatingButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElem
 }
 
 export const PulsatingButton = React.forwardRef<HTMLButtonElement, PulsatingButtonProps>(
-  ({ className, children, pulseColor = '#808080', duration = '1.5s', ...props }, ref) => {
+  ({ className, children, pulseColor, duration = '1.5s', ...props }, ref) => {
+    // Default to secondary color with reduced opacity if no pulseColor is provided
+    const defaultPulseColor = 'var(--secondary)';
+
     return (
       <button
         ref={ref}
@@ -17,7 +20,7 @@ export const PulsatingButton = React.forwardRef<HTMLButtonElement, PulsatingButt
         )}
         style={
           {
-            '--pulse-color': pulseColor,
+            '--pulse-color': pulseColor || defaultPulseColor,
             '--duration': duration,
           } as React.CSSProperties
         }
