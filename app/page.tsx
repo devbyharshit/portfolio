@@ -4,6 +4,7 @@ import ExperienceSection from '@/components/experience-section';
 import ProjectsSection from '@/components/projects-section';
 import { Button } from '@/components/ui/button';
 import { SkiperMarquee } from '@/components/ui/skiper-marquee';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -62,7 +63,7 @@ export default function Home() {
               size="lg"
               className="backdrop-blur-sm bg-primary/90 hover:bg-primary border border-primary/20 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
             >
-              Let's Collaborate
+              <Link href="/#contact">Let's Collaborate</Link>
             </Button>
             <Button
               size="lg"

@@ -355,7 +355,7 @@ export function SkiperMarquee() {
   }, []);
 
   return (
-    <section id="cta">
+    <section id="skills">
       <div className="container mx-auto px-4 py-12 md:px-8">
         <div className="flex w-full flex-col items-center justify-center">
           <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">

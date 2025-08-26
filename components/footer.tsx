@@ -22,7 +22,7 @@ export function Footer() {
               pulseColor="var(--pulse)"
               duration="2s"
             >
-              Get in Touch
+              <Link href="/#contact">Get in Touch</Link>
             </PulsatingButton>
           </div>
 
@@ -34,7 +34,7 @@ export function Footer() {
               <ul className="space-y-5">
                 <li>
                   <Link
-                    href="/about"
+                    href="/#about"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     About
@@ -42,7 +42,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/skills"
+                    href="/#skills"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Skills
@@ -50,7 +50,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/experience"
+                    href="/#experience"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Experience
@@ -58,7 +58,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/projects"
+                    href="#projects"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Projects
