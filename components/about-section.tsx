@@ -195,9 +195,6 @@ function AboutSection() {
                       alt="Harshit Anand"
                       fill
                       className="object-cover profile-image transition-transform duration-300"
-                      style={{
-                        filter: 'brightness(1.05) contrast(1.1) saturate(1.1)',
-                      }}
                     />
                     {/* Subtle overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
