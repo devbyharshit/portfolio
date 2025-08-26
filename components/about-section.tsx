@@ -14,6 +14,18 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+const EXPERTISE = [
+  'React',
+  'Next.js',
+  'TypeScript',
+  'Redux',
+  'Node.js',
+  'Java',
+  'MongoDB',
+  'PostgreSQL',
+  'AWS',
+];
+
 function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -205,16 +217,7 @@ function AboutSection() {
                 <div className="space-y-4">
                   <h3 className="font-semibold text-lg">Core Expertise</h3>
                   <div className="flex flex-wrap gap-2">
-                    {[
-                      'React',
-                      'Next.js',
-                      'TypeScript',
-                      'Node.js',
-                      'Java',
-                      'MongoDB',
-                      'PostgreSQL',
-                      'AWS',
-                    ].map((skill, index) => (
+                    {EXPERTISE.map((skill, index) => (
                       <Badge
                         key={skill}
                         variant="secondary"
