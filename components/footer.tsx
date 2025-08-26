@@ -11,10 +11,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Left side - Call to action */}
           <div className="space-y-6">
-            <h2 className="text-6xl md:text-6xl font-bold leading-tight tracking-tight uppercase mt-[-10px]">
-              LET'S WORK
+            <h2 className="text-6xl md:text-6xl font-bold leading-tight tracking-tight mt-[-10px]">
+              Ready to Create
               <br />
-              TOGETHER
+              Something Amazing?
             </h2>
 
             <PulsatingButton
@@ -22,7 +22,7 @@ export function Footer() {
               pulseColor="var(--pulse)"
               duration="2s"
             >
-              LET'S TALK
+              Get in Touch
             </PulsatingButton>
           </div>
 
@@ -121,7 +121,7 @@ export function Footer() {
         {/* Bottom section with copyright and policies */}
         <div className="border-t border-neutral-700 pt-8 flex flex-col justify-center items-center text-sm text-gray-400 text-center mb-4 md:mb-0 [font-family:var(--font-nunito-sans),_sans-serif]">
           <span>© {new Date().getFullYear()} Harshit Anand. All rights reserved.</span>
-          <span>Designed and built with ❤️</span>
+          <span>Thoughtfully crafted with care and creativity</span>
         </div>
       </div>
     </footer>

@@ -73,7 +73,7 @@ function ContactSection() {
   return (
     <section id="contact" className="container py-24 sm:py-32">
       <Toaster containerClassName="[font-family:var(--font-nunito-sans),_sans-serif]" />
-      <h2 className="text-3xl font-bold text-center mb-8 tracking-tighter">CONTACT ME</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 tracking-tighter">Let's Connect</h2>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -88,7 +88,7 @@ function ContactSection() {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your Name" {...field} />
+                    <Input placeholder="What should I call you?" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -101,7 +101,7 @@ function ContactSection() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="your.email@example.com" {...field} />
+                    <Input placeholder="Where can I reach you?" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -118,7 +118,7 @@ function ContactSection() {
                   <div className="relative w-full">
                     <div className="w-full max-w-full ">
                       <Textarea
-                        placeholder="Your message..."
+                        placeholder="What's on your mind? I'd love to hear about your project..."
                         className="min-h-[120px] resize-y w-full break-words whitespace-pre-wrap box-border break-all"
                         maxLength={MAX_MESSAGE_LENGTH}
                         {...field}
@@ -139,7 +139,7 @@ function ContactSection() {
           />
           <div className="flex justify-center">
             <Button className="px-8" type="submit" variant="secondary">
-              Submit
+              Send Message
             </Button>
           </div>
         </form>
