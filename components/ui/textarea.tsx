@@ -3,13 +3,6 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 function Textarea({ className, ...props }: React.ComponentProps<'textarea'>) {
-  // Use useEffect to ensure client-side only rendering for attributes added by browser extensions
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <textarea
       data-slot="form-control"

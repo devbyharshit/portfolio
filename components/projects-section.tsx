@@ -5,6 +5,19 @@ import { fetchPinnedRepos } from '@/lib/github';
 import { useQuery } from '@tanstack/react-query';
 import { ProjectCard } from './project-card';
 
+interface Repository {
+  name: string;
+  description: string;
+  url: string;
+  stargazers: {
+    totalCount: number;
+  };
+  primaryLanguage: {
+    name: string;
+    color: string;
+  } | null;
+}
+
 function ProjectsSection() {
   const { data: repos, isLoading } = useQuery({
     queryKey: ['pinned-repos'],
@@ -22,7 +35,7 @@ function ProjectsSection() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {repos?.map((repo: any) => (
+          {repos?.map((repo: Repository) => (
             <ProjectCard key={repo.name} repo={repo} />
           ))}
         </div>

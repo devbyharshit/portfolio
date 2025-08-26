@@ -39,7 +39,7 @@ export default function Home() {
             {/* Working text glow effect */}
             {/* <div className="absolute inset-0 bg-primary/20 rounded-lg blur-2xl " /> */}
             <span className="block">
-              <span className="text-muted-foreground drop-shadow-sm">Hello, I'm </span>
+              <span className="text-muted-foreground drop-shadow-sm">Hello, I&apos;m </span>
               <span className="bg-gradient-to-r from-foreground via-foreground to-foreground/90 bg-clip-text text-transparent drop-shadow-lg">
                 Harshit Anand
               </span>
@@ -63,7 +63,7 @@ export default function Home() {
               size="lg"
               className="backdrop-blur-sm bg-primary/90 hover:bg-primary border border-primary/20 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
             >
-              <Link href="/#contact">Let's Collaborate</Link>
+              <Link href="/#contact">Let&apos;s Collaborate</Link>
             </Button>
             <Button
               size="lg"

@@ -12,7 +12,7 @@ interface ProjectCardProps {
     primaryLanguage: {
       name: string;
       color: string;
-    };
+    } | null;
   };
 }
 
@@ -30,13 +30,15 @@ export function ProjectCard({ repo }: ProjectCardProps) {
               <FaStar className="text-yellow-400" />
               <span>{repo.stargazers.totalCount}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span
-                className="w-3 h-3 rounded-full"
-                style={{ backgroundColor: repo.primaryLanguage?.color }}
-              />
-              <span>{repo.primaryLanguage?.name}</span>
-            </div>
+            {repo.primaryLanguage && (
+              <div className="flex items-center gap-2">
+                <span
+                  className="w-3 h-3 rounded-full"
+                  style={{ backgroundColor: repo.primaryLanguage.color }}
+                />
+                <span>{repo.primaryLanguage.name}</span>
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>

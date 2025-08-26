@@ -307,7 +307,7 @@ function shuffleArray<T>(array: T[]): T[] {
   return array;
 }
 
-const ReviewCard = ({ icon, name, bg }: { icon: JSX.Element; bg: JSX.Element; name: string }) => {
+const ReviewCard = ({ icon, name }: { icon: JSX.Element; name: string }) => {
   const id = useId();
   const controls = useAnimation();
   const ref = useRef(null);

@@ -179,7 +179,7 @@ export function Header() {
               size="lg"
               variant="secondary"
             >
-              <Link href="/#contact">Let's Talk</Link>
+              <Link href="/#contact">Let&apos;s Talk</Link>
             </Button>
           </div>
         </motion.div>
@@ -250,7 +250,7 @@ export function Header() {
                   variant="secondary"
                 >
                   <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                    Let's Talk
+                    Let&apos;s Talk
                   </Link>
                 </Button>
               </div>

@@ -3,13 +3,6 @@ import * as React from 'react';
 import { cn } from '@/lib/utils';
 
 function Input({ className, type, ...props }: React.ComponentProps<'input'>) {
-  // Use useEffect to ensure client-side only rendering for attributes added by browser extensions
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <input
       type={type}

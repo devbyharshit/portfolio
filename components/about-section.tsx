@@ -133,29 +133,31 @@ function AboutSection() {
 
                 <div className="space-y-6">
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    I'm a <span className="text-primary font-semibold">Full Stack Engineer</span>{' '}
-                    with 5 years of experience turning caffeine into code and bugs into features
-                    (sometimes accidentally, but we don't talk about that).
+                    I&apos;m a{' '}
+                    <span className="text-primary font-semibold">Full Stack Engineer</span> with 5
+                    years of experience turning caffeine into code and bugs into features (sometimes
+                    accidentally, but we don&apos;t talk about that).
                   </p>
 
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    I've spent my career at places like{' '}
+                    I&apos;ve spent my career at places like{' '}
                     <span className="text-primary font-semibold">Publicis Sapient</span> and fintech
-                    startups, where I've learned that the best way to handle 10,000+ RPM is with a
-                    good sense of humor and even better error handling.
+                    startups, where I&apos;ve learned that the best way to handle 10,000+ RPM is
+                    with a good sense of humor and even better error handling.
                   </p>
 
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    My superpower? Making React components so reusable, they've started appearing in
-                    other people's dreams. When I'm not optimizing performance by 50% or reducing
-                    security vulnerabilities by 25%, you'll find me mentoring junior developers and
-                    pretending I knew what I was doing when I first started coding.
+                    My superpower? Making React components so reusable, they&apos;ve started
+                    appearing in other people&apos;s dreams. When I&apos;m not optimizing
+                    performance by 50% or reducing security vulnerabilities by 25%, you&apos;ll find
+                    me mentoring junior developers and pretending I knew what I was doing when I
+                    first started coding.
                   </p>
 
                   <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
                     <p className="text-primary font-medium italic">
-                      "I believe the best software is like a good joke—if you have to explain it, it
-                      probably needs refactoring."
+                      &ldquo;I believe the best software is like a good joke—if you have to explain
+                      it, it probably needs refactoring.&rdquo;
                     </p>
                   </div>
                 </div>

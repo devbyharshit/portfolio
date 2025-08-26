@@ -47,7 +47,7 @@ function ContactSection() {
       }
     });
     return () => subscription.unsubscribe();
-  }, [form.watch]);
+  }, [form]);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
@@ -65,7 +65,7 @@ function ContactSection() {
 
       toast.success('Message sent successfully!');
       form.reset();
-    } catch (error) {
+    } catch {
       toast.error('Failed to send message. Please try again.');
     }
   }
@@ -73,7 +73,7 @@ function ContactSection() {
   return (
     <section id="contact" className="container py-24 sm:py-32">
       <Toaster containerClassName="[font-family:var(--font-nunito-sans),_sans-serif]" />
-      <h2 className="text-3xl font-bold text-center mb-8 tracking-tighter">Let's Connect</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 tracking-tighter">Let&apos;s Connect</h2>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

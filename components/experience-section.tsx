@@ -133,7 +133,7 @@ function ExperienceSection() {
       <div className="text-center mb-16">
         <h2 className="text-3xl font-bold tracking-tighter mb-4">Professional Journey</h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          A showcase of my career growth and the impactful projects I've delivered
+          A showcase of my career growth and the impactful projects I&apos;ve delivered
         </p>
       </div>
 
