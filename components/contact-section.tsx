@@ -21,16 +21,33 @@ import { useEffect, useState } from 'react';
 const MAX_MESSAGE_LENGTH = 1000;
 
 const formSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters.'),
-  email: z.string().email('Invalid email address.'),
+  name: z
+    .string()
+    .min(1, 'Name is required.')
+    .transform((val) => val.trim())
+    .refine((val) => val.length >= 2, 'Name must be at least 2 characters.'),
+  email: z
+    .string()
+    .min(1, 'Email is required.')
+    .transform((val) => val.trim())
+    .refine((val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val), 'Invalid email address.'),
   message: z
     .string()
-    .min(10, 'Message must be at least 10 characters.')
-    .max(MAX_MESSAGE_LENGTH, `Message cannot exceed ${MAX_MESSAGE_LENGTH} characters.`),
+    .min(1, 'Message is required.')
+    .transform((val) => val.trim())
+    .refine((val) => val.length >= 10, 'Message must be at least 10 characters.')
+    .refine(
+      (val) => val.length <= MAX_MESSAGE_LENGTH,
+      `Message cannot exceed ${MAX_MESSAGE_LENGTH} characters.`,
+    ),
 });
 
 function ContactSection() {
   const [messageLength, setMessageLength] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [lastSubmitTime, setLastSubmitTime] = useState(0);
+  const RATE_LIMIT_MS = 3000; // 3 seconds between submissions
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -50,6 +67,23 @@ function ContactSection() {
   }, [form]);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    // Rate limiting check
+    const now = Date.now();
+    if (now - lastSubmitTime < RATE_LIMIT_MS) {
+      toast.error(
+        `Please wait ${Math.ceil((RATE_LIMIT_MS - (now - lastSubmitTime)) / 1000)} seconds before submitting again.`,
+      );
+      return;
+    }
+
+    // Prevent multiple simultaneous submissions
+    if (isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setLastSubmitTime(now);
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -65,8 +99,11 @@ function ContactSection() {
 
       toast.success('Message sent successfully!');
       form.reset();
+      setMessageLength(0);
     } catch {
       toast.error('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -138,8 +175,8 @@ function ContactSection() {
             )}
           />
           <div className="flex justify-center">
-            <Button className="px-8" type="submit" variant="secondary">
-              Send Message
+            <Button className="px-8" type="submit" variant="secondary" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </div>
         </form>
