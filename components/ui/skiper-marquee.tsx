@@ -22,7 +22,6 @@ import {
   SiMongodb,
   SiNextdotjs,
   SiNotion,
-  SiOpenai,
   SiPostgresql,
   SiPrettier,
   SiPrisma,
@@ -36,6 +35,7 @@ import {
   SiWebpack,
   SiZod,
 } from 'react-icons/si';
+import { BsOpenai } from "react-icons/bs";
 import { Marquee } from './marquee';
 
 const tiles = [
@@ -250,7 +250,7 @@ const tiles = [
     name: 'Prisma',
   },
   {
-    icon: <SiOpenai className="size-full" />,
+    icon: <BsOpenai className="size-full" />,
     bg: (
       <div className="pointer-events-none absolute left-1/2 top-1/2 size-1/2 -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full opacity-70 "></div>
     ),

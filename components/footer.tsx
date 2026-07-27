@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { BsTwitterX } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
-import { SiLinkedin } from 'react-icons/si';
+import { FaLinkedin } from "react-icons/fa";
 import { PulsatingButton } from './ui/pulsating-button';
 
 export function Footer() {
@@ -110,7 +110,7 @@ export function Footer() {
                     aria-label="LinkedIn"
                     className="w-8 h-8 rounded-full bg-background flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    <SiLinkedin size={16} />
+                    <FaLinkedin size={16} />
                   </Link>
                 </div>
               </div>
