@@ -1,8 +1,4 @@
-'use client';
-
-import { Skeleton } from '@/components/ui/skeleton';
 import { fetchPinnedRepos } from '@/lib/github';
-import { useQuery } from '@tanstack/react-query';
 import { ProjectCard } from './project-card';
 
 interface Repository {
@@ -18,28 +14,17 @@ interface Repository {
   } | null;
 }
 
-function ProjectsSection() {
-  const { data: repos, isLoading } = useQuery({
-    queryKey: ['pinned-repos'],
-    queryFn: fetchPinnedRepos,
-  });
+async function ProjectsSection() {
+  const repos = await fetchPinnedRepos();
 
   return (
     <section id="projects" className="container py-24 sm:py-32">
       <h2 className="text-3xl font-bold text-center mb-8 tracking-tighter">Creative Showcase</h2>
-      {isLoading ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <Skeleton key={i} className="h-48" />
-          ))}
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {repos?.map((repo: Repository) => (
-            <ProjectCard key={repo.name} repo={repo} />
-          ))}
-        </div>
-      )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {repos?.map((repo: Repository) => (
+          <ProjectCard key={repo.name} repo={repo} />
+        ))}
+      </div>
     </section>
   );
 }

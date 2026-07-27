@@ -1,7 +1,7 @@
 import AboutSection from '@/components/about-section';
 import ContactSection from '@/components/contact-section';
 import ExperienceSection from '@/components/experience-section';
-import ProjectsSection from '@/components/projects-section';
+// import ProjectsSection from '@/components/projects-section';
 import { Button } from '@/components/ui/button';
 import { SkiperMarquee } from '@/components/ui/skiper-marquee';
 import Link from 'next/link';
@@ -82,7 +82,7 @@ export default function Home() {
         <AboutSection />
         <SkiperMarquee />
         <ExperienceSection />
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
         <ContactSection />
       </main>
     </>

@@ -56,14 +56,14 @@ export function Footer() {
                     Experience
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="#projects"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Projects
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 

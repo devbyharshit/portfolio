@@ -160,14 +160,14 @@ export function Header() {
                   <Link href="/#experience">EXPERIENCE</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
-              <NavigationMenuItem>
+              {/* <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
                   className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors px-3 py-2"
                 >
                   <Link href="/#projects">PROJECTS</Link>
                 </NavigationMenuLink>
-              </NavigationMenuItem>
+              </NavigationMenuItem> */}
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -234,13 +234,13 @@ export function Header() {
               >
                 EXPERIENCE
               </Link>
-              <Link
+              {/* <Link
                 href="/#projects"
                 className="block text-lg font-medium text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-muted/50"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 PROJECTS
-              </Link>
+              </Link> */}
 
               <div className="pt-4 mt-4 border-t border-border/30">
                 <Button
